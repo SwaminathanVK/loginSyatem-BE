@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     password:{type :String , required:true},
     dateOfBirth:{type :Date, required:true},
     age : {type :Number, required:true},
-    contactNumber : {type :Number, required:true, unique:true },
+    contactNumber : {type :String, required:true, unique:true },
 },{timestamps:true});
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);
